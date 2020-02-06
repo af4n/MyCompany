@@ -60,6 +60,9 @@ main .main__welcome h1{
 	color: #d4d4d4;
 	font-size: 44px;
 }
+main .main__welcome h1:after{
+	display: none;
+}
 main .main__welcome p{
 	color: #d4d4d4;
 	font-size: 20px;
@@ -82,6 +85,9 @@ main .main__about{
 	display: inline-block;
 	border-bottom: 3px solid #fcac45;
 	padding-bottom: 20px;
+}
+.about__right h1:after{
+	display: none;
 }
 .about__right p{
 	margin: 30px 0 50px 0;
@@ -106,13 +112,13 @@ main .main__about{
 	font-size: 44px;
 	padding-bottom: 30px;
 }
-.line{
+h1:after{
+	content: '';
+	display: block;
+	margin: 0 auto;
 	width: 100px;
-	height: 3px;
-	background: #fcac45;
-	position: relative;
-	left: 45.5%;
-	margin-bottom: 85px;
+	padding-top: 30px;
+	border-bottom: 3px solid #fcac45;
 }
 .photo{
 	background: #d7d7d7;
@@ -198,6 +204,78 @@ main .main__about{
 .main__work img:hover{
 	opacity: 0.9;
 }
+.contact__from{
+	padding: 100px 0;
+}
+.contact__from h1{
+	color: #000;
+	margin-bottom: 30px;
+}
+.contact__from h1, p{
+	text-align: center;
+}
+.contact__wrapper{
+	width: 753px;
+	margin: 0 auto;
+	color: #636363;
+}
+.red{
+	color: red;
+}
+.form__inputs{
+	display: flex;
+}
+input{
+	width: 360px;
+	height: 40px;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+input:first-of-type{
+	margin-right: 30px;
+}
+textarea{
+	width: 100%;
+	height: 163px;
+}
+input, textarea{
+	border: 1px solid #999999;
+	margin-top: 5px;
+}
+form{
+	margin-top: 100px;
+}
+form p{
+	text-align: left;
+}
+.button__block{
+	display: flex;
+	justify-content: flex-end;
+}
+input[type=submit]{
+	width: 165px;
+	height: 40px;
+	background: #fcac45;
+	color: white;
+	margin-right: 0;
+	margin-top: 20px;
+}
+footer{
+	width: 100%;
+	height: auto;
+	background: #222;
+	padding: 30px 0;
+}
+.social{
+	display: flex;
+	justify-content: center;
+}
+.social img{
+	margin-left: 12px;
+}
+.social img:hover{
+	opacity: 0.7;
+}
 
 @media screen and (max-width: 1270px){
 	nav{
@@ -242,10 +320,6 @@ main .main__about{
 		top: -50px;
 		right: -200px;
 	}
-
-
-
-
 	main .main__welcome{
 		padding: 100px 0;
 	}
@@ -286,6 +360,24 @@ main .main__about{
 	.services__cards{
 		grid-template-columns: auto;
 	}
+	.contact__wrapper{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.form__inputs{
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	textarea{
+		width: 362px;
+	}
+	.button__block{
+		display: block;
+	}
+
 	.line1 img:not(:first-child){
 		display: none;
 	}
